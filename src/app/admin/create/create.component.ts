@@ -12,9 +12,10 @@ export class CreateComponent implements OnInit {
   userid: string;
   Name: String;
   EmailAddress: String;
-  password: string;
+  Password: String;
   PhoneNumber: Number;
   Balance: Number;
+  confirmpassword: String;
 
   constructor(private userService: UserService,
               public toastr: ToastsManager, vcr: ViewContainerRef) {
@@ -27,7 +28,7 @@ export class CreateComponent implements OnInit {
   createuser() {
       const newUser = {
           userid: this.userid,
-          password: this.password,
+          password: this.Password,
           Name: this.Name,
           EmailAddress: this.EmailAddress,
           PhoneNumber: this.PhoneNumber,
